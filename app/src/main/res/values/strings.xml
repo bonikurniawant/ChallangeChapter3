@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Challange Chapter 3</string>
+    <string name="batu">Batu</string>
+    <string name="kertas">Kertas</string>
+    <string name="gunting">Gunting</string>
+    <string name="refresh">Memulai ulang game</string>
+    <string name="result">Result</string>
+    <string name="tvGunting">Gunting</string>
+    <string name="tvBatu">Batu</string>
+    <string name="tvKertas">Kertas</string>
+    <string name="player">Pemain 1</string>
+    <string name="com">COM</string>
+    <string name="versus">VS</string>
+</resources>

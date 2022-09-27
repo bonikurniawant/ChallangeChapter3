@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvKertas"
+        style="@style/BaseTitle"
+        android:textColor="@color/orange"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#329F04"
+        style="@style/BaseTitle"
+        android:text="@string/tvGunting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle1" />
+
+    <TextView
+        android:id="@+id/tvTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#DF00CA"
+        style="@style/BaseTitle"
+        android:text="@string/tvBatu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle2" />
+
+    <LinearLayout
+        android:id="@+id/linLayPemain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle3"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvPemain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player"
+            style="@style/BasePlayerCom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLogo"
+            android:layout_marginTop="40dp"/>
+
+        <ImageView
+            android:id="@+id/ivBatu"
+            style="@style/BaseIconBatu"
+            android:contentDescription="@string/batu"
+            app:layout_constraintStart_toStartOf="@+id/tvPemain"
+            app:layout_constraintTop_toBottomOf="@+id/tvPemain" />
+
+        <ImageView
+            android:id="@+id/ivKertas"
+            style="@style/BaseIconKertas"
+            android:contentDescription="@string/kertas"
+            app:layout_constraintTop_toBottomOf="@+id/ivBatu"
+            app:layout_constraintStart_toStartOf="@+id/ivBatu" />
+
+        <ImageView
+            android:id="@+id/ivGunting"
+            style="@style/BaseIconGunting"
+            android:contentDescription="@string/gunting"
+            app:layout_constraintTop_toBottomOf="@+id/ivKertas"
+            app:layout_constraintStart_toStartOf="@+id/ivKertas" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linLayCom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle3"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/tvComputer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/com"
+            style="@style/BasePlayerCom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLogo"
+            android:layout_marginTop="40dp"/>
+
+        <ImageView
+            android:id="@+id/ivBatuCom"
+            style="@style/BaseIconBatu"
+            android:contentDescription="@string/batu"
+            app:layout_constraintTop_toBottomOf="@+id/tvPemain"
+            app:layout_constraintStart_toStartOf="@+id/tvPemain"/>
+
+        <ImageView
+            android:id="@+id/ivKertasCom"
+            style="@style/BaseIconKertas"
+            android:contentDescription="@string/kertas"
+            app:layout_constraintTop_toBottomOf="@+id/ivBatu"
+            app:layout_constraintStart_toStartOf="@+id/ivBatu"/>
+
+        <ImageView
+            android:id="@+id/ivGuntingCom"
+            style="@style/BaseIconGunting"
+            android:contentDescription="@string/gunting"
+            app:layout_constraintTop_toBottomOf="@+id/ivKertas"
+            app:layout_constraintStart_toStartOf="@+id/ivKertas"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="@string/versus"
+        android:contentDescription="@string/result"
+        style="@style/BaseResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle3"
+        app:layout_constraintStart_toEndOf="@id/linLayPemain"
+        app:layout_constraintEnd_toStartOf="@id/linLayCom"
+        android:layout_marginTop="160dp"/>
+
+    <ImageView
+        android:id="@+id/ivRefresh"
+        android:src="@drawable/ic_refresh"
+        android:contentDescription="@string/refresh"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
